@@ -61,17 +61,15 @@ PODS:
     - React-cxxreact (= 0.60.4)
     - React-jsi (= 0.60.4)
   - React-jsinspector (0.60.4)
-  - react-native-camera (2.11.1):
+  - react-native-camera (3.0.0):
     - React
-    - react-native-camera/RCT (= 2.11.1)
-    - react-native-camera/RN (= 2.11.1)
-  - react-native-camera/RCT (2.11.1):
+    - react-native-camera/RCT (= 3.0.0)
+    - react-native-camera/RN (= 3.0.0)
+  - react-native-camera/RCT (3.0.0):
     - React
-  - react-native-camera/RN (2.11.1):
+  - react-native-camera/RN (3.0.0):
     - React
-  - react-native-haptic-feedback (1.7.1):
-    - React
-  - react-native-image-picker (0.28.1):
+  - react-native-image-picker (1.0.1):
     - React
   - react-native-randombytes (3.5.3):
     - React
@@ -105,13 +103,17 @@ PODS:
     - React-fishhook (= 0.60.4)
   - RNCAsyncStorage (1.5.1):
     - React
+  - RNDeviceInfo (2.2.2):
+    - React
   - RNFS (2.13.3):
     - React
   - RNGestureHandler (1.3.0):
     - React
   - RNRate (1.0.1):
     - React
-  - RNSVG (9.5.1):
+  - RNReactNativeHapticFeedback (1.8.2):
+    - React
+  - RNSVG (9.5.3):
     - React
   - RNVectorIcons (6.6.0):
     - React
@@ -143,7 +145,6 @@ DEPENDENCIES:
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
   - react-native-camera (from `../node_modules/react-native-camera`)
-  - react-native-haptic-feedback (from `../node_modules/react-native-haptic-feedback`)
   - react-native-image-picker (from `../node_modules/react-native-image-picker`)
   - react-native-randombytes (from `../node_modules/react-native-randombytes`)
   - "react-native-slider (from `../node_modules/@react-native-community/slider`)"
@@ -159,9 +160,11 @@ DEPENDENCIES:
   - React-RCTVibration (from `../node_modules/react-native/Libraries/Vibration`)
   - React-RCTWebSocket (from `../node_modules/react-native/Libraries/WebSocket`)
   - "RNCAsyncStorage (from `../node_modules/@react-native-community/async-storage`)"
+  - RNDeviceInfo (from `../node_modules/react-native-device-info`)
   - RNFS (from `../node_modules/react-native-fs`)
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNRate (from `../node_modules/react-native-rate/ios`)
+  - RNReactNativeHapticFeedback (from `../node_modules/react-native-haptic-feedback`)
   - RNSVG (from `../node_modules/react-native-svg`)
   - RNVectorIcons (from `../node_modules/react-native-vector-icons`)
   - RNWatch (from `../node_modules/react-native-watch-connectivity`)
@@ -203,8 +206,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
   react-native-camera:
     :path: "../node_modules/react-native-camera"
-  react-native-haptic-feedback:
-    :path: "../node_modules/react-native-haptic-feedback"
   react-native-image-picker:
     :path: "../node_modules/react-native-image-picker"
   react-native-randombytes:
@@ -235,12 +236,16 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/Libraries/WebSocket"
   RNCAsyncStorage:
     :path: "../node_modules/@react-native-community/async-storage"
+  RNDeviceInfo:
+    :path: "../node_modules/react-native-device-info"
   RNFS:
     :path: "../node_modules/react-native-fs"
   RNGestureHandler:
     :path: "../node_modules/react-native-gesture-handler"
   RNRate:
     :path: "../node_modules/react-native-rate/ios"
+  RNReactNativeHapticFeedback:
+    :path: "../node_modules/react-native-haptic-feedback"
   RNSVG:
     :path: "../node_modules/react-native-svg"
   RNVectorIcons:
@@ -269,9 +274,8 @@ SPEC CHECKSUMS:
   React-jsi: 21d3153b1153fbf6510a92b6b11e33e725cb7432
   React-jsiexecutor: 7549641e48bafae7bfee3f3ea19bf4901639c5de
   React-jsinspector: 73f24a02fa684ed6a2b828ba116874a2191ded88
-  react-native-camera: 96a3c81f27da57b816fbb6808dde20dc96d1431e
-  react-native-haptic-feedback: 22c9dc85fd8059f83bf9edd9212ac4bd4ae6074d
-  react-native-image-picker: fd93361c666f397bdf72f9c6c23f13d2685b9173
+  react-native-camera: fa20f6aa54ce4a84c47e38a2d63dc0f3c18dccf9
+  react-native-image-picker: 4ffb12aa6e9a09ac5ada77a8deaf3a3f6495aa34
   react-native-randombytes: 991545e6eaaf700b4ee384c291ef3d572e0b2ca8
   react-native-slider: 6d83f7b8076a84e965a43fbdcfcf9dac19cea42e
   react-native-webview: 21c396687cb983fadc6ccc0751cc74f554131f3f
@@ -286,10 +290,12 @@ SPEC CHECKSUMS:
   React-RCTVibration: 0bea40cd51bd089bd591a8f74c86e91fdf2666c5
   React-RCTWebSocket: 163873f4cdd5f1058a9483443404fc3801581cb6
   RNCAsyncStorage: 2808c378f6a70f22f66eeb6c11a8d69f326dd795
+  RNDeviceInfo: a88be26a64ada7cbc2bc0ebbd1662d340304874e
   RNFS: c9bbde46b0d59619f8e7b735991c60e0f73d22c1
   RNGestureHandler: 5329a942fce3d41c68b84c2c2276ce06a696d8b0
   RNRate: 29be49c24b314c4e8ec09d848c3965f61cb0be47
-  RNSVG: 0eb087cfb5d7937be93c45b163b26352a647e681
+  RNReactNativeHapticFeedback: e11a4da0ce174e9f88b03cbaf5d76d94633cdee2
+  RNSVG: 90c76b7cf235654d45e54655b6c189ea4041057c
   RNVectorIcons: 0bb4def82230be1333ddaeee9fcba45f0b288ed4
   RNWatch: 09738b339eceb66e4d80a2371633ca5fb380fa42
   Sentry: 4e8a17b61ddd116f89536cc81d567fdee1ebca96
